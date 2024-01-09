@@ -1,0 +1,14 @@
+
+The Amazon Linux 2023 repository does not seem to contain MySQL.
+https://docs.aws.amazon.com/linux/al2023/release-notes/support-info-by-package.html
+
+Therefore, the following installation procedure must be used.
+
+sudo su -
+dnf -y localinstall https://dev.mysql.com/get/mysql80-community-release-el9-4.noarch.rpm
+dnf -y install mysql mysql-community-client
+
+
+If you are installing MySQL Server as well as MySQL Client, please also execute the following commands.
+
+dnf install mysql-community-server
